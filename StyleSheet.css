@@ -1,0 +1,132 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    background-color: #e0eaf5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.board {
+    animation: fadeIn 1s;
+}
+
+.cell:not(:empty) {
+    animation: scaleIn 0.3s;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+    }
+
+    .cell {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+}
+
+#container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 80px;
+    color: #333;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    font-size: 38px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 2px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.0em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .cell:hover {
+        background-color: #f0f0f0;
+    }
+
+button.reset {
+    font-size: 25px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+}
+
+    button.reset:hover {
+        background-color: #45a049;
+    }
+
+button.back {
+    font-size: 25px;
+    margin-top: 20px;
+    background-color: #f44336;
+}
+
+    button.back:hover {
+        background-color: #d32f2f;
+    }
+
+#playerTurn {
+    margin-top: 10px;
+    font-size: 2.0em;
+}

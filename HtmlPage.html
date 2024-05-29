@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Tic Tac Toe</h1><br>
+        <div id="gameMode">
+            <button onclick="startGame(1)">1 Player</button>
+            <button onclick="startGame(2)">2 Players</button>
+        </div>
+        <div id="gameArea" style="display: none;">
+            <div id="playerTurn"></div>
+            <div id="board" class="board"></div><br>
+            <button onclick="resetGame()" class="reset">Reset</button>
+            <button onclick="goBack()" class="back">Back</button>
+        </div>
+    </div>
+    <script src="JavaScript.js"></script>
+</body>
+</html>
